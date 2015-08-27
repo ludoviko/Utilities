@@ -7,6 +7,8 @@ import java.util.Arrays;
  *
  *        <p/>Class for testing whether a sentence is a pangram.
  *
+ *        It also can provide which letters are missing in the sentence to complete a pangram.
+ *
  *         <p/>
  *         A pangram (Greek: παν γράμμα, pan gramma, "every letter") or holoalphabetic sentence for a given
  *         alphabet is a sentence using every letter of the alphabet at least once. Pangrams have been used
