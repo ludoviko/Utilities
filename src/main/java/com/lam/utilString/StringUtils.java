@@ -274,7 +274,7 @@ public class StringUtils {
 		return true;
 	}
 
-	// The first letter of each word is capitalized
+	// The first letter of each word is capitalized.
 	public static String toFirstUpperCase(String title) {
 		char[] output = title.toCharArray();
 		boolean space = true;
