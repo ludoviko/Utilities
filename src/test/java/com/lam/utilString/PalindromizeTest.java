@@ -1,26 +1,21 @@
 package com.lam.utilString;
 
-import junit.framework.Assert;
-import junit.framework.TestCase;
+import org.junit.Assert;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PalindromizeTest extends TestCase {
+public class PalindromizeTest {
 	Palindromize pali;
 
-	@Override
 	@Before
-	protected void setUp() throws Exception {
-		super.setUp();
+	public void setUp() throws Exception {
 		this.pali = new Palindromize();
 	}
 
-	@Override
 	@After
-	protected void tearDown() throws Exception {
-		super.tearDown();
+	public void tearDown() throws Exception {
 		this.pali = null;
 	}
 
