@@ -36,47 +36,11 @@ public class Palindrome {
 		return true;
 	}
 
-	// XXX...  Compare w calFlac
-	public boolean isPalindrome(String data, int from, int upTo,
-			boolean ignorePunctuation) {
-	//	String data = string;
-		// Data is in lower case
-		// XXX in construction XXX 
-		// REGEX is too slow
-		int half_len = (upTo - from) / 2 + from;
-		int rest = (upTo - from) % 2;
-
-		int i = 0;
-		int j = 0;
-		int c = 0;
-		for (; i < (upTo - from) / 2 || j < (upTo - from) / 2;) {
-			if (ignorePunctuation) {
-				while ((data.charAt(half_len - i - 1) + "")
-						.matches(REGEX_Not_Letters_Numbers)) {
-					i++;
-				}
-				while ((data.charAt(half_len + rest + j) + "")
-						.matches(REGEX_Not_Letters_Numbers)) {
-					j++;
-				}
-			}
-			if (data.charAt(half_len - i - 1) == data.charAt(half_len + rest
-					+ j)) {
-				i++;
-				j++;
-				c++;
-			} else {
-				return false;
-			}
-		}
-		return true;
-	}
-
     public static boolean isPalindrome(char[] array) {
         // This method is intended to be lowlevel
         boolean result = true;
 
-        for (int i = 0; i < array.length / 2  + 1 ;i++) {
+        for (int i = 0; i < array.length / 2; i++) {
             if ( array[i] == array[array.length - 1 - i] ) {
             } else {
                 result = false;
@@ -90,8 +54,8 @@ public class Palindrome {
 	public static boolean isPalindrome(Integer[] array) {
 		boolean result = true;
 
-		for (int i = 0; i < array.length / 2  + 1 ;i++) {
-			if ( array[i] == array[array.length - 1 - i] ) {
+        for (int i = 0; i < array.length / 2; i++) {
+            if ( array[i] == array[array.length - 1 - i] ) {
 			} else {
 				result = false;
 				break;
@@ -101,8 +65,6 @@ public class Palindrome {
 		return  result;
 	}
 
-
-
 	private static boolean isAlpha(char a) {
 		if (a >= 'a' && a <= 'z')
 			return true;
@@ -110,7 +72,7 @@ public class Palindrome {
 			return true;
 		return false;
 	}
-	
+
 	public static void main(String[] strings) {
 		System.out.println(Palindrome.isPalindrome("a"));
 		System.out.println(Palindrome.isPalindrome("abba"));
@@ -134,4 +96,40 @@ public class Palindrome {
 		// System.out.println( Palindrome.isPalindrome(new char[] { 'a', 'd',
 		// 'a' , 'n' , ' ' , 'n' , 'a' , 'd', 'a' } ));
 	}
+
+    // XXX...  Compare w calFlac
+    public boolean isPalindrome(String data, int from, int upTo,
+                                boolean ignorePunctuation) {
+        //	String data = string;
+        // Data is in lower case
+        // XXX in construction XXX
+        // REGEX is too slow
+        int half_len = (upTo - from) / 2 + from;
+        int rest = (upTo - from) % 2;
+
+        int i = 0;
+        int j = 0;
+        int c = 0;
+        for (; i < (upTo - from) / 2 || j < (upTo - from) / 2; ) {
+            if (ignorePunctuation) {
+                while ((data.charAt(half_len - i - 1) + "")
+                        .matches(REGEX_Not_Letters_Numbers)) {
+                    i++;
+                }
+                while ((data.charAt(half_len + rest + j) + "")
+                        .matches(REGEX_Not_Letters_Numbers)) {
+                    j++;
+                }
+            }
+            if (data.charAt(half_len - i - 1) == data.charAt(half_len + rest
+                    + j)) {
+                i++;
+                j++;
+                c++;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
 }
