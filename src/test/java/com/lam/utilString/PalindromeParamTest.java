@@ -11,7 +11,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 /**
- * Created by Usuario on 31/03/2018.
+ * PalindromeParamTest
  */
 
 @RunWith(Parameterized.class)
@@ -58,9 +58,6 @@ public class PalindromeParamTest {
 
         });
     }
-
-    ;
-
 
     @Test(timeout = 3000)
     public void testIsPalindrome() {
