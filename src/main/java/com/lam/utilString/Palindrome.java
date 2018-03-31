@@ -72,30 +72,36 @@ public class Palindrome {
 		return true;
 	}
 
-	public static boolean isPalindrome(char[] chars) {
-		// This method is intended to be lowlevel
-		// XXX redo
-		int len = chars.length;
+    public static boolean isPalindrome(char[] array) {
+        // This method is intended to be lowlevel
+        boolean result = true;
 
-		int half_len = len / 2;
-		int rest = len % 2;
+        for (int i = 0; i < array.length / 2  + 1 ;i++) {
+            if ( array[i] == array[array.length - 1 - i] ) {
+            } else {
+                result = false;
+                break;
+            }
+        }
 
-		char[] s_1 = new char[half_len];
-		char[] s_2 = new char[half_len];
+        return  result;
+    }
 
-		for (int i = 0; i < half_len; i++) {
-			s_1[i] = chars[i];
-			s_2[i] = chars[half_len + rest + i];
-		}
+	public static boolean isPalindrome(Integer[] array) {
+		boolean result = true;
 
-		for (int i = 0; i < half_len; i++) {
-			if (s_1[i] == s_2[half_len - i - 1]) {
+		for (int i = 0; i < array.length / 2  + 1 ;i++) {
+			if ( array[i] == array[array.length - 1 - i] ) {
 			} else {
-				return false;
+				result = false;
+				break;
 			}
 		}
-		return true;
+
+		return  result;
 	}
+
+
 
 	private static boolean isAlpha(char a) {
 		if (a >= 'a' && a <= 'z')
