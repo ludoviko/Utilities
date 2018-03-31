@@ -1,5 +1,8 @@
 package com.lam.utilDate;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 public class DateUtil {
 	public static boolean isLeapYear(int year) {
 		if (isCentury(year)) {
@@ -31,4 +34,45 @@ public class DateUtil {
 
 		return true;
 	}
+
+    public static String getDay(String day, String month, String year) {
+        Calendar calendar = new GregorianCalendar();
+
+        calendar.set(Integer.parseInt(year), Integer.parseInt(month) - 1, Integer.parseInt(day));
+
+        String dayOfWeek = null;
+        switch (calendar.get(Calendar.DAY_OF_WEEK)) {
+            case 1: {
+                dayOfWeek = "Sunday".toUpperCase();
+                break;
+            }
+            case 2: {
+                dayOfWeek = "Monday".toUpperCase();
+                break;
+            }
+            case 3: {
+                dayOfWeek = "Tuesday".toUpperCase();
+                break;
+            }
+            case 4: {
+                dayOfWeek = "Wednesday".toUpperCase();
+                break;
+            }
+            case 5: {
+                dayOfWeek = "Thursday".toUpperCase();
+                break;
+            }
+            case 6: {
+                dayOfWeek = "Friday".toUpperCase();
+                break;
+            }
+            case 7: {
+                dayOfWeek = "Saturday".toUpperCase();
+                break;
+            }
+
+        }
+
+        return dayOfWeek;
+    }
 }
