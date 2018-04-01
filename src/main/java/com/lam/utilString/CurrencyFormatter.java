@@ -4,14 +4,11 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 
-/**
- * Created by Usuario on 01/04/2018.
- */
 public class CurrencyFormatter {
-    DecimalFormat decimalFormat;
+    private DecimalFormat decimalFormat;
     private DecimalFormatSymbols dfs;
 
-    CurrencyFormatter(Locale locale) {
+    public CurrencyFormatter(Locale locale) {
         decimalFormat = (DecimalFormat) DecimalFormat.getCurrencyInstance(locale);
         dfs = DecimalFormatSymbols.getInstance(locale);
     }
@@ -34,7 +31,6 @@ public class CurrencyFormatter {
         CurrencyFormatter currencyFormatter4 = new CurrencyFormatter(new Locale("fr", "FR"));
         currencyFormatter4.setFractionDigits(2);
         currencyFormatter4.println(money);
-
     }
 
     private void setCurrencySymbol(String currencySymbol) {
