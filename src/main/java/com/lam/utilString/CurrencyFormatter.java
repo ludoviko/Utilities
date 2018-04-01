@@ -13,6 +13,19 @@ public class CurrencyFormatter {
         dfs = DecimalFormatSymbols.getInstance(locale);
     }
 
+    private void setCurrencySymbol(String currencySymbol) {
+        dfs.setCurrencySymbol(currencySymbol);
+        decimalFormat.setDecimalFormatSymbols(dfs);
+    }
+
+    public void setFractionDigits(int fractionDigits) {
+        decimalFormat.setMaximumFractionDigits(fractionDigits);
+    }
+
+    public void println(double money) {
+        System.out.println(decimalFormat.format(money));
+    }
+
     public static void main(String args[]) {
         double money = 12324.134;
 
@@ -33,17 +46,5 @@ public class CurrencyFormatter {
         currencyFormatter4.println(money);
     }
 
-    private void setCurrencySymbol(String currencySymbol) {
-        dfs.setCurrencySymbol(currencySymbol);
-        decimalFormat.setDecimalFormatSymbols(dfs);
-    }
-
-    public void setFractionDigits(int fractionDigits) {
-        decimalFormat.setMaximumFractionDigits(fractionDigits);
-    }
-
-    public void println(double money) {
-        System.out.println(decimalFormat.format(money));
-    }
 
 }
