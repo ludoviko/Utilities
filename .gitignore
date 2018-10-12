@@ -56,7 +56,6 @@ hs_err_pid*
 
 # IntelliJ project files
 .idea
-*.iml
 out
 gen### Vim template
 [._]*.s[a-w][a-z]
