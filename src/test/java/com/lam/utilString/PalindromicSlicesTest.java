@@ -1,30 +1,24 @@
 package com.lam.utilString;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
-import junit.framework.Assert;
-import junit.framework.TestCase;
-
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PalindromicSlicesTest extends TestCase {
+import java.util.ArrayList;
+import java.util.List;
+
+public class PalindromicSlicesTest {
 	PalindromicSlices slices;
 
-	@Override
 	@Before
-	protected void setUp() throws Exception {
-		super.setUp();
+	public void setUp() throws Exception {
 		this.slices = new PalindromicSlices(new ArrayList<String>());
 	}
 
-	@Override
 	@After
-	protected void tearDown() throws Exception {
-		super.tearDown();
+	public void tearDown() throws Exception {
 		this.slices = null;
 	}
 

@@ -1,28 +1,21 @@
 package com.lam.utilString;
 
 
-import junit.framework.TestCase;
-
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class NumberToLettersTest extends TestCase {
-
+public class NumberToLettersTest {
 	NumberToLetters letters;
 	
-	@Override
 	@Before
-	protected void setUp() throws Exception {
-		super.setUp();
+	public void setUp() throws Exception {
 		this.letters = new NumberToLetters();
 	}
 
-	@Override
 	@After
-	protected void tearDown() throws Exception {
-		super.tearDown();
+	public void tearDown() throws Exception {
 		this.letters = null;
 	}
 

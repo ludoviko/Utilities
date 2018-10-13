@@ -1,30 +1,24 @@
 package com.lam.utilString;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import junit.framework.TestCase;
-
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class UserNameTest extends TestCase {
+import java.util.ArrayList;
+import java.util.List;
+
+public class UserNameTest {
 
 	private UserName user;
 
-	@Override
 	@Before
-	protected void setUp() throws Exception {
-		super.setUp();
+	public void setUp() throws Exception {
 		this.user = new UserName();
 	}
 
-	@Override
 	@After
-	protected void tearDown() throws Exception {
-		super.tearDown();
+	public void tearDown() throws Exception {
 		this.user = null;
 	}
 

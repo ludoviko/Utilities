@@ -12,7 +12,6 @@ import org.junit.Test;
 
 
 public class PangramTest  {
-
     Pangram pangram;
 
     @Before

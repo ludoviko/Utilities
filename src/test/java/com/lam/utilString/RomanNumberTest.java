@@ -1,24 +1,19 @@
 package com.lam.utilString;
 
-import junit.framework.TestCase;
 
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class RomanNumberTest extends TestCase {
+public class RomanNumberTest {
 
-	@Override
 	@Before
-	protected void setUp() throws Exception {
-		super.setUp();
+	public void setUp() throws Exception {
 	}
 
-	@Override
 	@After
-	protected void tearDown() throws Exception {
-		super.tearDown();
+	public void tearDown() throws Exception {
 	}
 
 	@Test
