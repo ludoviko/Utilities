@@ -1,6 +1,8 @@
 package com.lam.utilString;
 
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.TreeMap;
@@ -11,13 +13,15 @@ public class WordCountTest {
 	// Tested with JUnit 4
 	TreeMap<String, Integer> map;
 
+    @Before
     public void setUp() throws Exception {
-		this.map  = new TreeMap<String, Integer>();
-	}
+        this.map  = new TreeMap<String, Integer>();
+    }
 
+    @After
     public void tearDown() throws Exception {
-		this.map = null;
-	}
+        this.map = null;
+    }
 
     @Test
     public void testWordCount() {
