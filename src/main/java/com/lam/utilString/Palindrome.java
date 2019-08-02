@@ -132,4 +132,13 @@ public class Palindrome {
         }
         return true;
     }
+
+    public boolean checkPalindrome(String s) {
+        if (s.length() <= 1) {
+            return true;
+        } else {
+            return s.charAt(0) == s.charAt(s.length() - 1) && checkPalindrome(s.substring(1, s.length() - 1));
+        }
+    }
+
 }
